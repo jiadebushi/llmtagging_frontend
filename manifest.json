@@ -1,0 +1,29 @@
+{
+  "name": "icon and select test",
+
+  "version": "1.0",
+
+  "manifest_version": 3,
+
+  "description": "select text and icon appear",
+
+  "icons": {
+    "128": "128.png" 
+  },
+  "action": {
+    "default_icon": {
+       "128": "128.png"
+    },
+    "default_popup": "popup.html"
+ },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "permissions": ["sidePanel", "contextMenus","storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"], 
+      "js": ["select.js"] 
+    }
+  ]
+}
