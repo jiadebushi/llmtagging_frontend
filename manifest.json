@@ -1,7 +1,7 @@
 {
   "name": "icon and select test",
 
-  "version": "1.0",
+  "version": "9.0",
 
   "manifest_version": 3,
 
@@ -9,6 +9,9 @@
 
   "icons": {
     "128": "128.png" 
+  },
+  "background":{
+    "service_worker": "service-worker.js"
   },
   "action": {
     "default_icon": {

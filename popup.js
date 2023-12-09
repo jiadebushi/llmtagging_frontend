@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
         chrome.storage.local.get(['extensionEnabled'], function (result) {
-            console.log('Value currently is ' + result);
+            console.log('Value currently is ' + result.extensionEnabled);
         });
 
     });
