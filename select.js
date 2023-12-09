@@ -31,10 +31,22 @@ window.onload = function () {
       //判断有无选中文字
       setTimeout(function () {
         //设置图标位置
-        ourIcon.style.display = "block"; //ourIcon呈现为块级元素
+        let displayOurIcon = true;
+        chrome.storage.local.get(["iconNearMouseEnabled"], function (result) {
+          displayOurIcon = result.iconNearMouseEnabled;
+          console.log(
+            "Value of displayOurIcon currently is: " +
+              displayOurIcon
+          );
+        });
+        setTimeout(() => {
+          ourIcon.style.display = displayOurIcon ? "block" : "none"; //ourIcon呈现为块级元素
+          console.log(ourIcon.style.display);
+        }, 100);
+        
         ourIcon.style.left = left + "px";
         ourIcon.style.top = top + 45 + "px";
-      }, 150);
+      }, 100);
     }
   };
 
@@ -61,7 +73,8 @@ window.onload = function () {
     }, 100);
     // 100ms时间差传递selected-text-to-sidepanel
     // 因为sidepanel打开之前，sidepanel.js收不到消息/document找不到？
-    chrome.runtime.sendMessage({ type: "open_side_panel" }, () => {//打开侧边栏
+    chrome.runtime.sendMessage({ type: "open_side_panel" }, () => {
+      //打开侧边栏
       console.log("send open_side_panel to service-worker.js");
     });
   };

@@ -4,6 +4,8 @@
 
 `sidepanel.html`:侧边栏
 
-`popup.js`：默认界面的逻辑，控制开关（是否选中了显示图标）
+`popup\popup.js`：默认界面的逻辑，控制开关（是否选中了显示图标）,跳转到设置页面(还没实现，现在是跳转到github)
 
 `popup.html`:默认界面，暂时有个按钮
+
+`service-woeker.js`:打开侧边栏

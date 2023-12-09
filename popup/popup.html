@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="./popup.css" />
+        <div class="lt-header">
+            <div class = "lt-logo-name">
+                <div class="lt-logo"></div>
+            </div>
+            <b>LLM Tagging</b>
+            <div class="lt-blank-container">
+                <div class = "lt-settings-icon" id="lt-popuphead-settings-icon"></div>
+            </div>
+            
+            
+        </div>
+    </head>
+
+    <body>
+        <div class="config-tab">
+            <div class="checkmark"></div>
+            想使用 LLM Tagging，你可以：
+            <ul>
+                <li>点击<b>图标</b></li>
+                <li>鼠标<b>右键</b></li>
+                <li>打开<b>侧边栏</b></li>
+              </ul>
+        </div>
+
+        <div class="switch-container">
+            是否在阅读时显示LLM Tagging图标
+            <label class="switch">
+                <input type="checkbox" id="switch-button" checked>
+                <div class="slider round"></div>
+              </label>
+        </div>
+        
+        <footer>
+            ©2023
+            <a href="https://github.com/jiadebushi/llmtagging_frontend" target="blank">
+                LLM Tagging
+            </a>
+        </footer>
+    </body>
+
+    <script src="./popup.js"></script>
+</html>
