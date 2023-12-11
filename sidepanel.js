@@ -11,4 +11,9 @@ chrome.runtime.onMessage.addListener(({ name, data }) => {
     console.log(document.getElementById("definition-word").innerText);
 
   }
+  else if(name == "response-summary-to-sidepanel"){
+    console.log("receive response-summary-to-sidepanel")
+    document.body.querySelector("#summary-text").innerText = data.value;
+
+  }
 });
