@@ -1,19 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
 <html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="./sidepanel.css" />
+    <title>Tagging Side Panel</title>
+  </head>
 
-<head>
-  <title>Dictionary Side Panel</title>
-</head>
+  <body>
+    <h1>LLM Tagging</h1>
+    <hr />
+    <p id="select-a-word">Select text to see the tags.</p>
+    <div>
+      <div class="lt-sidepanel-content-1">
+        <div class="lt-sidepanel-content-head">
+          <b flex-direction="row">原文</b>
+          <div
+            class="lt-sidepanel-copy-icon"
+            id="sidepanel_copy_button"
+            title="复制"
+          ></div>
+          <div
+            class="lt-sidepanel-edit-icon"
+            id="sidepanel_edit_button"
+            title="编辑"
+          ></div>
+          <div
+            class="lt-sidepanel-nodisplay-icon"
+            id="sidepanel_nodisplay_button"
+            title="折叠"
+          ></div>
+        </div>
 
-<body>
-  <h1>LLM Tagging</h1>
-  <hr />
-  <p id="select-a-word">Select text to see the tags.</p>
-  <div>
-    <h2 id="definition-word"></h2>
-    <p id="summary-text"></p>
-  </div>
-  <script src="sidepanel.js"></script>
-  <!-- <script src="service-worker.js"></script> -->
-</body>
-
+        <div
+          class="lt-sidepanel-content-text-1 resize"
+          id="text_container"
+          style="height: 150px; overflow-x: hidden"
+        >
+          <p id="definition-word" contenteditable="false"></p>
+        </div>
+      </div>
+      <div class="lt-sidepanel-content-head">
+        <b flex-direction="row">Tags</b>
+        <div
+          class="lt-sidepanel-copy-icon"
+          id="sidepanel_copy_button2"
+          title="复制"
+        ></div>
+        <div
+          class="lt-sidepanel-edit-icon"
+          id="sidepanel_edit_button2"
+          title="编辑"
+        ></div>
+      </div>
+      <div class="lt-sidepanel-content-text-2" id="text_container2">
+        <!-- <p id="definition-text" contenteditable="false"></p> -->
+        <p id="summary-text" contenteditable="false"></p>
+      </div>
+    </div>
+    <script src="sidepanel.js"></script>
+  </body>
 </html>
