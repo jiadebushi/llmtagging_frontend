@@ -8,6 +8,74 @@ element {
     --code-background-color: rgb(13, 17, 23);
 }
 
+/* 清样式，如果是项目中，不推荐使用通配符来清样式，建议使用标签清样式，通配符清样式会增加页面压力 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 宽度为屏宽的一半，高度为屏高的一半，然后居中 */
+.box {
+    width: 100vw;
+    height: 10vh;
+    margin: 0 auto;
+}
+
+/* 清除li样式 */
+ul,
+li {
+    list-style: none;
+}
+
+/* 将ul相对定位，目的是让内容的div绝对定位时相对ul定位，否则会相对body定位 */
+/* ul弹性盒，目的是让li横着排，也可以将li浮动或者转行内块 */
+ul {
+    position: relative;
+    display: flex;
+}
+
+/* 将三个li宽度平分，高度60px */
+li {
+    flex: 1;
+    height: 30px;
+}
+
+/* input隐藏 */
+input {
+    display: none;
+}
+
+/* 设置input的下一个节点label的样式 */
+input+label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    font-size: 13px;
+    text-align: center;
+    line-height: 30px;
+    color: #333;
+}
+
+/* 设置div内容的基础样式 隐藏内容div*/
+input+label+div {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 30px;
+}
+
+/* input选中状态时候对应的label的样式 */
+input:checked+label {
+    background: #b6b5b5;
+    color: #fff;
+}
+
+/* input选中时候显示对应的div */
+input:checked+label+div {
+    display: block;
+}
+
 /* label,
 textarea {
     font-size: 0.8rem;
@@ -49,11 +117,27 @@ p{
     }
 }
 
+.lt-sidepanel-content-2 {
+    border-bottom: 1px solid #dae1e8;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 6px 10px;
+    /* height: fit-content; */
+    box-sizing: border-box;
+
+    ::-webkit-scrollbar {
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+    }
+}
+
 .lt-sidepanel-content-text-1 {
     border-bottom: 0px solid #dae1e8;
     display: flex;
     flex-direction: row;
-    align-items:flex-start;
+    align-items: flex-start;
     /* padding: 6px 10px; */
     font-weight: 80%;
     height: 300px;
@@ -65,7 +149,7 @@ p{
     border-bottom: 0px solid #dae1e8;
     display: flex;
     flex-direction: row;
-    align-items:flex-start;
+    align-items: flex-start;
     padding: 6px 10px;
     font-weight: 80%;
     background-position: left;
@@ -95,7 +179,7 @@ p{
     }
 }
 
-.lt-sidepanel-content-head{
+.lt-sidepanel-content-head {
     border-bottom: 0px solid #dae1e8;
     display: flex;
     flex-direction: row;
@@ -119,6 +203,7 @@ p{
     border-radius: 2px;
     cursor: pointer;
 }
+
 .checkMark {
     content: url("./ok.png");
     width: 15px;
@@ -131,7 +216,8 @@ p{
     border-radius: 2px;
     cursor: pointer;
 }
-.lt-sidepanel-edit-icon{
+
+.lt-sidepanel-edit-icon {
     content: url("./editicon.png");
     width: 15px;
     height: 15px;
@@ -141,6 +227,7 @@ p{
     border-radius: 2px;
     cursor: pointer;
 }
+
 .lt-sidepanel-nodisplay-icon {
     content: url("./nodisplay.png");
     width: 15px;

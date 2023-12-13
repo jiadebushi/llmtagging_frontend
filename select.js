@@ -93,6 +93,34 @@ window.onload = function () {
         });
       })
       .catch(error => console.error('Error:', error));
+
+      fetch('http://127.0.0.1:5000/summarize/article', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ "content": selectedText }),
+      })
+        .then(response => {
+          // console.log("response.json() is ", response.json());
+          return response.json();
+        })
+        .then(data => {
+          // Display the returned content in the frontend
+          console.log('Response from the backend:', data);
+          // Handle the data as needed, e.g., update the UI
+          chrome.runtime.sendMessage(
+            {
+              name: "response-summary-to-sidepanel2",
+              data: { value: data["summary"] },
+            },
+            () => {
+              console.log("send response-summary-to-sidepanel2");
+            }
+          );
+
+        })
+        .catch(error => console.error('Error:', error));
   
     setTimeout(() => {
       chrome.runtime.sendMessage(
