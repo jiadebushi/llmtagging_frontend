@@ -114,7 +114,19 @@ p{
     background-position: right;
     background-repeat: no-repeat;
     margin-right: 2%;
-    margin-left: 75%;
+    margin-left: 65%;
+
+    border-radius: 2px;
+    cursor: pointer;
+}
+.checkMark {
+    content: url("./ok.png");
+    width: 15px;
+    height: 15px;
+    background-position: right;
+    background-repeat: no-repeat;
+    margin-right: 2%;
+    margin-left: 65%;
 
     border-radius: 2px;
     cursor: pointer;

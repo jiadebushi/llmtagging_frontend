@@ -24,26 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const edit_button2 = document.getElementById("sidepanel_edit_button2");
   const copy_button2 = document.getElementById("sidepanel_copy_button2");
 
-  // //复制按钮事件绑定
-  // $("#sidepanel_copy_button").on("tap", function () {
-  //   //获取input对象
-  //   var obj = document.getElementById("definition-word").innerText;
-  //   //选择当前对象
-  //   obj.select();
-  //   try {
-  //     //进行复制到剪切板
-  //     if (document.execCommand("Copy", "false", null)) {
-  //       //如果复制成功
-  //       alert("复制成功！");
-  //     } else {
-  //       //如果复制失败
-  //       alert("复制失败！");
-  //     }
-  //   } catch (err) {
-  //     //如果报错
-  //     alert("复制错误！")
-  //   }
-  // })
 
   display_button.addEventListener("click", function () {
     console.log("display_button click");
@@ -87,7 +67,19 @@ document.addEventListener("DOMContentLoaded", function () {
     text.select();
     document.execCommand('Copy');
     text.remove();
-    alert("copied")
+
+     // 隐藏复制按钮
+     document.getElementById("sidepanel_copy_button").style.display = "none";
+
+     // 显示对钩
+     document.getElementById("checkMark").style.display = "inline";
+
+     // 1秒后恢复按钮并隐藏对钩
+     setTimeout(function () {
+         document.getElementById("sidepanel_copy_button").style.display = "inline";
+         document.getElementById("checkMark").style.display = "none";
+     }, 1000);
+
   });
 
   copy_button2.addEventListener("click", function () {
@@ -97,7 +89,18 @@ document.addEventListener("DOMContentLoaded", function () {
     text.select();
     document.execCommand('Copy');
     text.remove();
-    alert("copied")
+
+     // 隐藏复制按钮
+     document.getElementById("sidepanel_copy_button2").style.display = "none";
+
+     // 显示对钩
+     document.getElementById("checkMark2").style.display = "inline";
+
+     // 1秒后恢复按钮并隐藏对钩
+     setTimeout(function () {
+         document.getElementById("sidepanel_copy_button2").style.display = "inline";
+         document.getElementById("checkMark2").style.display = "none";
+     }, 1000);
   });
 
 

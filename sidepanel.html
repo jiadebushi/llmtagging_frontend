@@ -13,12 +13,13 @@
     <div>
       <div class="lt-sidepanel-content-1">
         <div class="lt-sidepanel-content-head">
-          <b flex-direction="row">原文</b>
+          <b>原文</b>
           <div
             class="lt-sidepanel-copy-icon"
             id="sidepanel_copy_button"
             title="复制"
           ></div>
+          <span id="checkMark" class="checkMark" style="display: none;">✔</span>
           <div
             class="lt-sidepanel-edit-icon"
             id="sidepanel_edit_button"
@@ -40,12 +41,13 @@
         </div>
       </div>
       <div class="lt-sidepanel-content-head">
-        <b flex-direction="row">Tags</b>
+        <b>Tags</b>
         <div
           class="lt-sidepanel-copy-icon"
           id="sidepanel_copy_button2"
           title="复制"
         ></div>
+        <span id="checkMark2" class="checkMark" style="display: none;">✔</span>
         <div
           class="lt-sidepanel-edit-icon"
           id="sidepanel_edit_button2"
@@ -56,7 +58,6 @@
         <!-- <p id="definition-text" contenteditable="false"></p> -->
         <p id="summary-text" contenteditable="false"></p>
       </div>
-      <textarea id="input" style="display:none">用于复制</textarea>
     </div>
     <script src="sidepanel.js"></script>
   </body>
