@@ -8,7 +8,7 @@ element {
     --code-background-color: rgb(13, 17, 23);
 }
 
-label,
+/* label,
 textarea {
     font-size: 0.8rem;
     letter-spacing: 1px;
@@ -30,8 +30,8 @@ label {
     margin-bottom: 10px;
 }
 p{
-    pointer-events: none;
-}
+     pointer-events: none; 
+} */
 
 .lt-sidepanel-content-1 {
     border-bottom: 1px solid #dae1e8;

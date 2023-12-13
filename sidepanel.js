@@ -79,6 +79,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  copy_button.addEventListener("click", function () {
+    document.body.querySelector("#sidepanel_copy_button").innerHTML="./128.png"
+
+    const text = document.createElement('textarea');
+    text.value = document.body.querySelector("#definition-word").innerText;
+    document.body.appendChild(text);
+    text.select();
+    document.execCommand('Copy');
+    text.remove();
+    alert("copied")
+  });
+
+  copy_button2.addEventListener("click", function () {
+    const text = document.createElement('textarea');
+    text.value = document.body.querySelector("#summary-text").innerText;
+    document.body.appendChild(text);
+    text.select();
+    document.execCommand('Copy');
+    text.remove();
+    // alert("copied")
+  });
+
 
 
 });
