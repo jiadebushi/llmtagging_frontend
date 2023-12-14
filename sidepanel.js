@@ -6,6 +6,9 @@ chrome.runtime.onMessage.addListener(({ name, data }) => {
     document.body.querySelector("#select-a-word2").style.display = "none";
     // Show word and definition.
     document.body.querySelector("#definition-word").innerText = data.value;
+
+    document.body.querySelector("#definition-word2").innerText = data.value;
+
     document.body.querySelector("#definition-text").innerText =
       data.value.toLowerCase();
     console.log(document.getElementById("definition-word").innerText);
@@ -71,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   display_button2.addEventListener("click", function () {
-    var e = document.getElementById("definition-word");
+    var e = document.getElementById("definition-word2");
     e.select(); // 选择对象
     document.execCommand("Copy"); // 执行浏览器复制命令
   });
@@ -87,11 +90,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   edit_button3.addEventListener("click", function () {
     console.log("edit_button click");
-    console.log(document.body.querySelector("#definition-word").contentEditable)
-    if(document.body.querySelector("#definition-word").contentEditable !== true){
-      document.body.querySelector("#definition-word").contentEditable = true;
+    console.log(document.body.querySelector("#definition-word2").contentEditable)
+    if(document.body.querySelector("#definition-word2").contentEditable !== true){
+      document.body.querySelector("#definition-word2").contentEditable = true;
     }else{
-      document.body.querySelector("#definition-word").contentEditable = false;
+      document.body.querySelector("#definition-word2").contentEditable = false;
     }
   });
 
@@ -152,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
   copy_button3.addEventListener("click", function () {
 
     const text = document.createElement('textarea');
-    text.value = document.body.querySelector("#definition-word").innerText;
+    text.value = document.body.querySelector("#definition-word2").innerText;
     document.body.appendChild(text);
     text.select();
     document.execCommand('Copy');
@@ -174,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   copy_button4.addEventListener("click", function () {
     const text = document.createElement('textarea');
-    text.value = document.body.querySelector("#summary-text").innerText;
+    text.value = document.body.querySelector("#summary-text2").innerText;
     document.body.appendChild(text);
     text.select();
     document.execCommand('Copy');
