@@ -239,7 +239,17 @@ p{
     border-radius: 2px;
     cursor: pointer;
 }
+.lt-sidepanel-unfold-icon {
+    content: url("./unfold.png");
+    width: 15px;
+    height: 15px;
+    background-position: right;
+    margin-right: 2%;
 
+    background-repeat: no-repeat;
+    border-radius: 2px;
+    cursor: pointer;
+}
 .lt-container{
     width: 100%;
     flex:1;

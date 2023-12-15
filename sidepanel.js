@@ -27,9 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const copy_button3 = document.getElementById("sidepanel_copy_button3");
   const copy_button4 = document.getElementById("sidepanel_copy_button4");
   const display_button = document.getElementById("sidepanel_nodisplay_button");
-  const display_button2 = document.getElementById(
-    "sidepanel_nodisplay_button2"
-  );
+  const display_button2 = document.getElementById("sidepanel_nodisplay_button2");
+  const unfold_button2 =  document.getElementById("sidepanel_unfold_button2");
   const edit_button = document.getElementById("sidepanel_edit_button");
   const edit_button2 = document.getElementById("sidepanel_edit_button2");
   const edit_button3 = document.getElementById("sidepanel_edit_button3");
@@ -52,19 +51,43 @@ document.addEventListener("DOMContentLoaded", function () {
   // });
 
   display_button2.addEventListener("click", function () {
-    console.log("display_button2 click");
+  // alert("click");
+  console.log("display_button2 click");
+  console.log(
+    "#text_container3 style.display is",
+    document.body.querySelector("#text_container3").style.display
+  );
+
+  if (
+    document.body.querySelector("#text_container3").style.display === "inline"
+  ) {
+    document.body.querySelector("#text_container3").style.display = "none";
+    document.body.querySelector("#sidepanel_nodisplay_button2").style.display = "none";
+    document.body.querySelector("#sidepanel_unfold_button2").style.display = "inline";
+  } else {
+    document.body.querySelector("#text_container3").style.display = "inline";
+  }
+  });
+
+  unfold_button2.addEventListener("click",function(){
+    console.log("unfold_button2 click");
     console.log(
       "#text_container3 style.display is",
       document.body.querySelector("#text_container3").style.display
     );
+  
     if (
-      document.body.querySelector("#text_container3").style.display !== "none"
+      document.body.querySelector("#text_container3").style.display === "none"
     ) {
-      document.body.querySelector("#text_container3").style.display = "none";
-    } else {
       document.body.querySelector("#text_container3").style.display = "inline";
+      document.body.querySelector("#sidepanel_unfold_button2").style.display = "none";
+      document.body.querySelector("#sidepanel_nodisplay_button2").style.display = "inline";
+    } else {
+      document.body.querySelector("#text_container3").style.display = "none";
     }
-  });
+  })
+
+
 
   edit_button.addEventListener("click", function () {
     console.log("edit_button click");
@@ -80,17 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // display_button.addEventListener("click", function () {
-  //   var e = document.getElementById("definition-word");
-  //   e.select(); // 选择对象
-  //   document.execCommand("Copy"); // 执行浏览器复制命令
-  // });
-
-  // display_button2.addEventListener("click", function () {
-  //   var e = document.getElementById("definition-word2");
-  //   e.select(); // 选择对象
-  //   document.execCommand("Copy"); // 执行浏览器复制命令
-  // });
 
   edit_button2.addEventListener("click", function () {
     console.log("edit_button2 click");
@@ -230,7 +242,29 @@ display_button.onclick = function () {
     document.body.querySelector("#text_container").style.display === "inline"
   ) {
     document.body.querySelector("#text_container").style.display = "none";
+    document.body.querySelector("#sidepanel_nodisplay_button").style.display = "none";
+    document.body.querySelector("#sidepanel_unfold_button").style.display = "inline";
   } else {
     document.body.querySelector("#text_container").style.display = "inline";
   }
 };
+
+document.getElementById("sidepanel_unfold_button").onclick = function(){
+  console.log("unfold_button click");
+  console.log(
+    "#text_container1 style.display is",
+    document.body.querySelector("#text_container").style.display
+  );
+
+  if (
+    document.body.querySelector("#text_container").style.display === "none"
+  ) {
+    document.body.querySelector("#text_container").style.display = "inline";
+    document.body.querySelector("#sidepanel_unfold_button").style.display = "none";
+    document.body.querySelector("#sidepanel_nodisplay_button").style.display = "inline";
+  } else {
+    document.body.querySelector("#text_container").style.display = "none";
+  }
+}
+
+
