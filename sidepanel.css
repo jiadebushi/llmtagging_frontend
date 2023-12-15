@@ -239,3 +239,8 @@ p{
     border-radius: 2px;
     cursor: pointer;
 }
+
+.lt-container{
+    width: 100%;
+    flex:1;
+}
