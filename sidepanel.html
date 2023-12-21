@@ -1,162 +1,126 @@
 <!DOCTYPE html>
 <meta charset="utf-8" />
 <html>
-  <head>
-    <link type="text/css" rel="stylesheet" href="./sidepanel.css" />
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tagging Side Panel</title>
-  </head>
+<head>
+  <link type="text/css" rel="stylesheet" href="./sidepanel.css" />
 
-  <body>
-    <h1>LLM Tagging</h1>
-    <hr />
-    <div class="box">
-      <ul>
-        <li>
-          <input type="radio" name="check" id="active1" checked /><label
-            for="active1"
-            >tags</label
-          >
-          <div class="lt-container">
-            <p id="select-a-word">Select text to see the tags.</p>
-            <div >
-              <div class="lt-sidepanel-content-1">
-                <div class="lt-sidepanel-content-head">
-                  <b>原文</b>
-                  <div
-                    class="lt-sidepanel-copy-icon"
-                    id="sidepanel_copy_button"
-                    title="复制"
-                  ></div>
-                  <span id="checkMark" class="checkMark" style="display: none"
-                    >✔</span
-                  >
-                  <div
-                    class="lt-sidepanel-edit-icon"
-                    id="sidepanel_edit_button"
-                    title="编辑"
-                  ></div>
-                  <div
-                    class="lt-sidepanel-nodisplay-icon"
-                    id="sidepanel_nodisplay_button"
-                    title="折叠"
-                  ></div>
-                  <div
-                  class="lt-sidepanel-unfold-icon"
-                  id="sidepanel_unfold_button"
-                  style="display: none"
-                  title="展开">
-                  </div>
-                </div>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tagging Side Panel</title>
+</head>
 
-                <div
-                  class="lt-sidepanel-content-text-1 resize"
-                  id="text_container"
-                  style="height: 150px; overflow-x: hidden; display: inline"
-                >
-                  <p id="definition-word" contenteditable="false"></p>
-                </div>
-              </div>
+<body>
+  <h1>LLM Tagging</h1>
+  <hr />
+  <div class="box">
+    <ul>
+      <li>
+        <input type="radio" name="check" id="active1" checked /><label for="active1">tags</label>
+        <div class="lt-container">
+          <p id="select-a-word">Select text to see the tags.</p>
+          <div>
+            <div class="lt-sidepanel-content-1">
               <div class="lt-sidepanel-content-head">
-                <b>Tags</b>
-                <div
-                  class="lt-sidepanel-copy-icon"
-                  id="sidepanel_copy_button2"
-                  title="复制"
-                ></div>
-                <span id="checkMark2" class="checkMark" style="display: none"
-                  >✔</span
-                >
-                <div
-                  class="lt-sidepanel-edit-icon"
-                  id="sidepanel_edit_button2"
-                  title="编辑"
-                ></div>
+                <b>原文</b>
+                <div class="lt-sidepanel-copy-icon" id="sidepanel_copy_button" title="复制"></div>
+                <span id="checkMark" class="checkMark" style="display: none">✔</span>
+                <div class="lt-sidepanel-edit-icon" id="sidepanel_edit_button" title="编辑"></div>
+                <div class="lt-sidepanel-nodisplay-icon" id="sidepanel_nodisplay_button" title="折叠"></div>
+                <div class="lt-sidepanel-unfold-icon" id="sidepanel_unfold_button" style="display: none" title="展开">
+                </div>
               </div>
-              <div class="lt-sidepanel-content-text-2" id="text_container2">
-                <p id="summary-text" contenteditable="false"></p>
+
+              <div class="lt-sidepanel-content-text-1 resize" id="text_container"
+                style="height: 150px; overflow-x: hidden; display: inline">
+                <p id="definition-word" contenteditable="false"></p>
               </div>
             </div>
-            <script src="sidepanel.js"></script>
+            <div class="lt-sidepanel-content-head">
+              <b>Tags</b>
+              <div class="lt-sidepanel-copy-icon" id="sidepanel_copy_button2" title="复制"></div>
+              <span id="checkMark2" class="checkMark" style="display: none">✔</span>
+              <div class="lt-sidepanel-edit-icon" id="sidepanel_edit_button2" title="编辑"></div>
+            </div>
+            <div class="lt-sidepanel-content-text-2" id="text_container2">
+              <p id="summary-text" contenteditable="false"></p>
+            </div>
           </div>
-        </li>
-        <li>
-          <input type="radio" name="check" id="active2" /><label for="active2"
-            >summary</label
-          >
-          <div class="lt-container">
-            <p id="select-a-word2">Select text to see the tags.</p>
-            <div>
-              <div class="lt-sidepanel-content-2">
-                <div class="lt-sidepanel-content-head">
-                  <b>原文</b>
-                  <div
-                    class="lt-sidepanel-copy-icon"
-                    id="sidepanel_copy_button3"
-                    title="复制"
-                  ></div>
-                  <span id="checkMark3" class="checkMark" style="display: none"
-                    >✔</span
-                  >
-                  <div
-                    class="lt-sidepanel-edit-icon"
-                    id="sidepanel_edit_button3"
-                    title="编辑"
-                  ></div>
-                  <div
-                    class="lt-sidepanel-nodisplay-icon"
-                    id="sidepanel_nodisplay_button2"
-                    title="折叠"
-                  ></div>
-                  <div
-                  class="lt-sidepanel-unfold-icon"
-                  id="sidepanel_unfold_button2"
-                  style="display: none"
-                  title="展开">
-                  </div>
-                </div>
-
-                <div
-                  class="lt-sidepanel-content-text-1 resize"
-                  id="text_container3"
-                  style="height: 150px; overflow-x: hidden;display:inline"
-                >
-                  <p id="definition-word2" contenteditable="false"></p>
-                  <!--                <p id="definition-word" contenteditable="false"></p>-->
-                </div>
-              </div>
+          <script src="sidepanel.js"></script>
+        </div>
+      </li>
+      <li>
+        <input type="radio" name="check" id="active2" /><label for="active2">summary</label>
+        <div class="lt-container">
+          <p id="select-a-word2">Select text to see the tags.</p>
+          <div>
+            <div class="lt-sidepanel-content-2">
               <div class="lt-sidepanel-content-head">
-                <b>Summary</b>
-                <div
-                  class="lt-sidepanel-copy-icon"
-                  id="sidepanel_copy_button4"
-                  title="复制"
-                ></div>
-                <span id="checkMark4" class="checkMark" style="display: none"
-                  >✔</span
-                >
-                <div
-                  class="lt-sidepanel-edit-icon"
-                  id="sidepanel_edit_button4"
-                  title="编辑"
-                ></div>
+                <b>原文</b>
+                <div class="lt-sidepanel-copy-icon" id="sidepanel_copy_button3" title="复制"></div>
+                <span id="checkMark3" class="checkMark" style="display: none">✔</span>
+                <div class="lt-sidepanel-edit-icon" id="sidepanel_edit_button3" title="编辑"></div>
+                <div class="lt-sidepanel-nodisplay-icon" id="sidepanel_nodisplay_button2" title="折叠"></div>
+                <div class="lt-sidepanel-unfold-icon" id="sidepanel_unfold_button2" style="display: none" title="展开">
+                </div>
               </div>
-              <div class="lt-sidepanel-content-text-2" id="text_container4">
-                <p id="summary-text2" contenteditable="false"></p>
+
+              <div class="lt-sidepanel-content-text-1 resize" id="text_container3"
+                style="height: 150px; overflow-x: hidden;display:inline">
+                <p id="definition-word2" contenteditable="false"></p>
+                <!--                <p id="definition-word" contenteditable="false"></p>-->
               </div>
             </div>
-            <script src="sidepanel.js"></script>
+            <div class="lt-sidepanel-content-head">
+              <b>Summary</b>
+              <div class="lt-sidepanel-copy-icon" id="sidepanel_copy_button4" title="复制"></div>
+              <span id="checkMark4" class="checkMark" style="display: none">✔</span>
+              <div class="lt-sidepanel-edit-icon" id="sidepanel_edit_button4" title="编辑"></div>
+            </div>
+            <div class="lt-sidepanel-content-text-2" id="text_container4">
+              <p id="summary-text2" contenteditable="false"></p>
+            </div>
           </div>
-        </li>
-        <li>
-          <input type="radio" name="check" id="active3" /><label for="active3"
-            >第三页</label
-          >
-          <div>To be done</div>
-        </li>
-      </ul>
-    </div>
-  </body>
+          <script src="sidepanel.js"></script>
+        </div>
+      </li>
+      <li>
+        <input type="radio" name="check" id="active3" /><label for="active3">taglist</label>
+        <div class="lt-container">
+          <p id="select-a-word3">Select text to see the tags.</p>
+          <div>
+            <div class="lt-sidepanel-content-3">
+              <div class="lt-sidepanel-content-head">
+                <b>原文</b>
+                <div class="lt-sidepanel-copy-icon" id="sidepanel_copy_button5" title="复制"></div>
+                <span id="checkMark5" class="checkMark" style="display: none">✔</span>
+                <div class="lt-sidepanel-edit-icon" id="sidepanel_edit_button5" title="编辑"></div>
+                <div class="lt-sidepanel-nodisplay-icon" id="sidepanel_nodisplay_button3" title="折叠"></div>
+                <div class="lt-sidepanel-unfold-icon" id="sidepanel_unfold_button3" style="display: none" title="展开">
+                </div>
+              </div>
+
+              <div class="lt-sidepanel-content-text-1 resize" id="text_container5"
+                style="height: 150px; overflow-x: hidden;display:inline">
+                <p id="definition-word3" contenteditable="false"></p>
+                <!--                <p id="definition-word" contenteditable="false"></p>-->
+              </div>
+            </div>
+            <div class="lt-sidepanel-content-head">
+              <b>Taglist</b>
+              <div class="lt-sidepanel-copy-icon" id="sidepanel_copy_button6" title="复制"></div>
+              <span id="checkMark6" class="checkMark" style="display: none">✔</span>
+              <div class="lt-sidepanel-edit-icon" id="sidepanel_edit_button6" title="编辑"></div>
+            </div>
+            <div class="lt-sidepanel-content-text-2" id="text_container6">
+              <p id="summary-text3" contenteditable="false"></p>
+            </div>
+          </div>
+          <script src="sidepanel.js"></script>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+
 </html>

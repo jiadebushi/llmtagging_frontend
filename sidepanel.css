@@ -133,6 +133,22 @@ p{
     }
 }
 
+.lt-sidepanel-content-3 {
+    border-bottom: 1px solid #dae1e8;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 6px 10px;
+    /* height: fit-content; */
+    box-sizing: border-box;
+
+    ::-webkit-scrollbar {
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+    }
+}
+
 .lt-sidepanel-content-text-1 {
     border-bottom: 0px solid #dae1e8;
     display: flex;
@@ -146,6 +162,17 @@ p{
 }
 
 .lt-sidepanel-content-text-2 {
+    border-bottom: 0px solid #dae1e8;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 6px 10px;
+    font-weight: 80%;
+    background-position: left;
+    box-sizing: border-box;
+}
+
+.lt-sidepanel-content-text-3 {
     border-bottom: 0px solid #dae1e8;
     display: flex;
     flex-direction: row;
